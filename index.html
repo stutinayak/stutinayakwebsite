@@ -38,6 +38,10 @@
         <a href="StutiNayakResume.pdf" target="_blank" rel="noopener">↗ Resume</a>
         <a href="mailto:stuti257@gmail.com">↗ Say Hello</a>
       </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+        <span class="theme-toggle-icon"></span>
+        <span class="theme-toggle-label">Dark mode</span>
+      </button>
     </aside>
 
     <!-- Content -->
@@ -274,5 +278,26 @@
     <p>&copy; 2026 Stuti Nayak</p>
   </footer>
 
+  <script>
+    const toggle = document.getElementById('themeToggle');
+    const label = toggle.querySelector('.theme-toggle-label');
+    const icon = toggle.querySelector('.theme-toggle-icon');
+
+    function applyTheme(dark) {
+      document.documentElement.classList.toggle('dark', dark);
+      label.textContent = dark ? 'Light mode' : 'Dark mode';
+      icon.textContent = dark ? '☀' : '☾';
+    }
+
+    const saved = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    applyTheme(saved ? saved === 'dark' : prefersDark);
+
+    toggle.addEventListener('click', () => {
+      const isDark = document.documentElement.classList.contains('dark');
+      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      applyTheme(!isDark);
+    });
+  </script>
 </body>
 </html>

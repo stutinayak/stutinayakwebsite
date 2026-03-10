@@ -13,6 +13,22 @@
   --border: #e9e9e7;
   --tag-bg: #f1f1ef;
   --sidebar-width: 240px;
+  --row-bg: #f7f7f5;
+  --hero-bio-color: #444;
+  --row-desc-color: #555;
+}
+
+html.dark {
+  --bg: #191919;
+  --sidebar-bg: #212121;
+  --text: #e8e8e4;
+  --muted: #6b6b6b;
+  --accent: #5b9cf6;
+  --border: #2e2e2e;
+  --tag-bg: #2a2a2a;
+  --row-bg: #212121;
+  --hero-bio-color: #aaa;
+  --row-desc-color: #999;
 }
 
 body {
@@ -150,7 +166,7 @@ body {
 
 .hero-bio {
   font-size: 0.95rem;
-  color: #444;
+  color: var(--hero-bio-color);
   line-height: 1.75;
   max-width: 580px;
   margin-bottom: 1rem;
@@ -306,7 +322,7 @@ body {
 
 .row {
   padding: 0.85rem 1rem;
-  background: var(--sidebar-bg);
+  background: var(--row-bg);
   border-radius: 6px;
   border: 1px solid var(--border);
 }
@@ -333,7 +349,7 @@ body {
 
 .row-desc {
   font-size: 0.83rem;
-  color: #555;
+  color: var(--row-desc-color);
 }
 
 /* ---- Toolkit ---- */
@@ -426,6 +442,32 @@ footer {
   font-size: 0.78rem;
   color: var(--muted);
   border-top: 1px solid var(--border);
+}
+
+/* ---- Theme toggle ---- */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-family: inherit;
+  transition: background 0.1s, color 0.1s;
+  width: 100%;
+}
+
+.theme-toggle:hover {
+  background: var(--border);
+  color: var(--text);
+}
+
+.theme-toggle-icon {
+  font-size: 0.85rem;
 }
 
 /* ---- Responsive ---- */
