@@ -12,281 +12,266 @@
 </head>
 <body>
 
-  <div class="page">
+  <!-- Top bar -->
+  <header class="topbar">
+    <span class="topbar-name">Stuti Nayak</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <span class="theme-icon" id="themeIcon">☾</span>
+    </button>
+  </header>
 
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <div class="sidebar-top">
-        <img src="stuti_ai_pic.png" alt="Stuti Nayak" class="avatar" />
-        <p class="sidebar-name">Stuti Nayak</p>
-        <p class="sidebar-role">ML Engineer · Data Engineer</p>
-        <p class="sidebar-location">The Hague, Netherlands</p>
-        <p class="sidebar-open">Open to roles NL / EU</p>
-      </div>
-      <nav class="sidebar-nav">
-        <a href="#build">What I Build</a>
-        <a href="#systems">Selected Systems</a>
-        <a href="#experience">Experience</a>
-        <a href="#toolkit">Toolkit</a>
-        <a href="#education">Education</a>
-        <a href="#hobbies">Hobbies</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="sidebar-links">
-        <a href="https://www.linkedin.com/in/stuti-nayak/" target="_blank" rel="noopener">↗ LinkedIn</a>
-        <a href="https://github.com/stutinayak" target="_blank" rel="noopener">↗ GitHub</a>
-        <a href="StutiNayakResume.pdf" target="_blank" rel="noopener">↗ Resume</a>
-        <a href="mailto:stuti257@gmail.com">↗ Say Hello</a>
-      </div>
-      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-        <span class="theme-toggle-icon"></span>
-        <span class="theme-toggle-label">Dark mode</span>
-      </button>
-    </aside>
+  <main class="container">
 
-    <!-- Content -->
-    <main class="content">
-
-      <!-- Hero -->
-      <section id="hero" class="block hero-block">
-        <h1 class="page-title">Stuti Nayak</h1>
-        <p class="page-subtitle">ML Engineer · Data Engineer</p>
-        <p class="hero-bio">Building production ML systems, NLP pipelines, and LLM-powered applications integrated with real-world data pipelines and cloud infrastructure.</p>
-        <div class="hero-contact">
+    <!-- Hero -->
+    <section class="hero">
+      <img src="stuti_ai_pic.png" alt="Stuti Nayak" class="avatar" />
+      <div class="hero-text">
+        <h1>Stuti Nayak</h1>
+        <p class="role">ML Engineer · Data Engineer</p>
+        <p class="location">The Hague, Netherlands &middot; <span class="open-badge">Open to roles NL / EU</span></p>
+        <p class="bio">Building production ML systems, NLP pipelines, and LLM-powered applications integrated with real-world data pipelines and cloud infrastructure.</p>
+        <nav class="hero-links" aria-label="Contact links">
           <a href="https://www.linkedin.com/in/stuti-nayak/" target="_blank" rel="noopener">LinkedIn</a>
           <a href="https://github.com/stutinayak" target="_blank" rel="noopener">GitHub</a>
           <a href="StutiNayakResume.pdf" target="_blank" rel="noopener">Resume</a>
-          <a href="mailto:stuti257@gmail.com">Say Hello</a>
+          <a href="mailto:stuti257@gmail.com">Email</a>
+        </nav>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- What I Build -->
+    <section id="build">
+      <h2>What I Build</h2>
+      <ul class="build-list">
+        <li>
+          <span class="build-label">Machine Learning Systems</span>
+          <span class="build-detail">NLP classification pipelines (BERT / RoBERTa)</span>
+        </li>
+        <li>
+          <span class="build-label">LLM Applications</span>
+          <span class="build-detail">Retrieval-Augmented Generation systems</span>
+        </li>
+        <li>
+          <span class="build-label">Data Infrastructure</span>
+          <span class="build-detail">Streaming pipelines and ML deployment systems</span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skill-filters" id="skillFilters" role="group" aria-label="Filter projects by skill">
+        <button class="skill-tag active" data-skill="all">All</button>
+        <button class="skill-tag" data-skill="Python">Python</button>
+        <button class="skill-tag" data-skill="PyTorch">PyTorch</button>
+        <button class="skill-tag" data-skill="Transformers">Transformers</button>
+        <button class="skill-tag" data-skill="LangChain">LangChain</button>
+        <button class="skill-tag" data-skill="RAG">RAG</button>
+        <button class="skill-tag" data-skill="FastAPI">FastAPI</button>
+        <button class="skill-tag" data-skill="Kafka">Kafka</button>
+        <button class="skill-tag" data-skill="AWS">AWS</button>
+        <button class="skill-tag" data-skill="GCP">GCP</button>
+        <button class="skill-tag" data-skill="MLFlow">MLFlow</button>
+        <button class="skill-tag" data-skill="SQL">SQL</button>
+        <button class="skill-tag" data-skill="Pandas">Pandas</button>
+      </div>
+      <p class="filter-hint" id="filterHint" aria-live="polite"></p>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Selected Systems -->
+    <section id="systems">
+      <h2>Selected Systems</h2>
+      <div class="projects" id="projectList">
+
+        <article class="project" data-skills="Python,FastAPI,LangChain,RAG,Transformers">
+          <div class="project-header">
+            <h3>Food QA Retrieval System</h3>
+            <a href="https://www.datascienceportfol.io/stuti257/projects/1" target="_blank" rel="noopener">View &rarr;</a>
+          </div>
+          <p>Production-style Q&amp;A API using Retrieval-Augmented Generation with document chunking and vector indexing.</p>
+          <div class="tag-list" aria-label="Technologies used">
+            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">Transformers</span>
+          </div>
+        </article>
+
+        <article class="project" data-skills="Python,PyTorch,Transformers,AWS">
+          <div class="project-header">
+            <h3>NLP Classification Pipeline</h3>
+            <a href="https://www.datascienceportfol.io/stuti257/projects/2" target="_blank" rel="noopener">View &rarr;</a>
+          </div>
+          <p>BERT/BERTopic multi-label classification; RoBERTa sentiment analysis pipeline deployed on AWS.</p>
+          <div class="tag-list" aria-label="Technologies used">
+            <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">AWS</span>
+          </div>
+        </article>
+
+        <article class="project" data-skills="Python,Kafka,MLFlow,GCP">
+          <div class="project-header">
+            <h3>Streaming Data Pipeline</h3>
+          </div>
+          <p>IoT simulation pipeline using Kafka ingestion, processing layer, and ML analytics on Google Cloud.</p>
+          <div class="tag-list" aria-label="Technologies used">
+            <span class="tag">Python</span><span class="tag">Kafka</span><span class="tag">MLFlow</span><span class="tag">GCP</span>
+          </div>
+        </article>
+
+        <article class="project" data-skills="Python,Scikit-learn,Pandas,SQL">
+          <div class="project-header">
+            <h3>Churn Prediction</h3>
+            <a href="https://www.datascienceportfol.io/stuti257/projects/0" target="_blank" rel="noopener">View &rarr;</a>
+          </div>
+          <p>End-to-end ML project predicting customer churn for a telecom company with EDA and model deployment.</p>
+          <div class="tag-list" aria-label="Technologies used">
+            <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">SQL</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="timeline">
+
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Data Engineer</span>
+            <span class="job-meta">The Hague &middot; Current</span>
+          </div>
+          <p>Built Kafka-based IoT simulation pipeline and secure streaming architecture with data governance.</p>
         </div>
-      </section>
 
-      <div class="divider"></div>
-
-      <!-- What I Build -->
-      <section id="build" class="block">
-        <h2 class="block-title">What I Build</h2>
-        <div class="build-grid">
-          <div class="build-item">
-            <p class="build-category">Machine Learning Systems</p>
-            <p class="build-detail">NLP classification pipelines (BERT / RoBERTa)</p>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Data Scientist &mdash; Knownwell</span>
+            <span class="job-meta">The Hague &middot; Feb 2024 – Jul 2024</span>
           </div>
-          <div class="build-item">
-            <p class="build-category">LLM Applications</p>
-            <p class="build-detail">Retrieval-Augmented Generation systems</p>
-          </div>
-          <div class="build-item">
-            <p class="build-category">Data Infrastructure</p>
-            <p class="build-detail">Streaming pipelines and ML deployment systems</p>
-          </div>
+          <p>NLP classification using BERT / BERTopic; RoBERTa sentiment analysis; deployed on AWS and GCP.</p>
         </div>
-      </section>
 
-      <div class="divider"></div>
-
-      <!-- Selected Systems -->
-      <section id="systems" class="block">
-        <h2 class="block-title">Selected Systems</h2>
-        <div class="systems-grid">
-
-          <div class="system-card">
-            <h3 class="system-title">Food QA Retrieval System</h3>
-            <div class="flow">
-              <span>user query</span>
-              <span class="arrow">↓</span>
-              <span>embedding model</span>
-              <span class="arrow">↓</span>
-              <span>vector search</span>
-              <span class="arrow">↓</span>
-              <span>LLM answer generation</span>
-            </div>
-            <div class="stack-tags">
-              <span>Python</span><span>FastAPI</span><span>LangChain</span><span>Transformers</span>
-            </div>
-            <a href="https://www.datascienceportfol.io/stuti257/projects/1" target="_blank" rel="noopener">View →</a>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Data Scientist &mdash; Rate.nl</span>
+            <span class="job-meta">Rotterdam &middot; Aug 2021 – Sept 2023</span>
           </div>
-
-          <div class="system-card">
-            <h3 class="system-title">NLP Classification Pipeline</h3>
-            <div class="flow">
-              <span>dataset</span>
-              <span class="arrow">↓</span>
-              <span>preprocessing</span>
-              <span class="arrow">↓</span>
-              <span>BERT classification model</span>
-              <span class="arrow">↓</span>
-              <span>deployed inference pipeline</span>
-            </div>
-            <div class="stack-tags">
-              <span>Python</span><span>PyTorch</span><span>HuggingFace</span><span>AWS</span>
-            </div>
-            <a href="https://www.datascienceportfol.io/stuti257/projects/2" target="_blank" rel="noopener">View →</a>
-          </div>
-
-          <div class="system-card">
-            <h3 class="system-title">Streaming Data Pipeline</h3>
-            <div class="flow">
-              <span>IoT simulation</span>
-              <span class="arrow">↓</span>
-              <span>Kafka ingestion</span>
-              <span class="arrow">↓</span>
-              <span>processing layer</span>
-              <span class="arrow">↓</span>
-              <span>ML analytics</span>
-            </div>
-            <div class="stack-tags">
-              <span>Kafka</span><span>Python</span><span>Data pipelines</span>
-            </div>
-          </div>
-
+          <p>wav2vec 2.0 audio analysis; MLFlow MLOps pipeline; Google Cloud deployment.</p>
         </div>
-      </section>
 
-      <div class="divider"></div>
-
-      <!-- Experience -->
-      <section id="experience" class="block">
-        <h2 class="block-title">Experience</h2>
-        <div class="timeline">
-
-          <div class="row">
-            <div class="row-left">
-              <span class="row-title">Data Engineer</span>
-              <span class="row-meta">The Hague · Current</span>
-            </div>
-            <p class="row-desc">Built Kafka-based IoT simulation pipeline and secure streaming architecture.</p>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Researcher, Clinical Data Science &mdash; Maastricht University</span>
+            <span class="job-meta">Sept 2019 – Aug 2020</span>
           </div>
-
-          <div class="row">
-            <div class="row-left">
-              <span class="row-title">Data Scientist — Knownwell</span>
-              <span class="row-meta">The Hague · Feb 2024 – Jul 2024</span>
-            </div>
-            <p class="row-desc">NLP classification models using BERT / BERTopic; deployed ML systems on AWS and GCP.</p>
-          </div>
-
-          <div class="row">
-            <div class="row-left">
-              <span class="row-title">Data Scientist — Rate.nl</span>
-              <span class="row-meta">Rotterdam · Aug 2021 – Sept 2023</span>
-            </div>
-            <p class="row-desc">wav2vec 2.0 audio analysis; MLFlow MLOps pipeline; Google Cloud deployment.</p>
-          </div>
-
-          <div class="row">
-            <div class="row-left">
-              <span class="row-title">Researcher, Clinical Data Science — Maastricht University</span>
-              <span class="row-meta">Sept 2019 – Aug 2020</span>
-            </div>
-            <p class="row-desc">Vantage federated learning infrastructure; semantic data modeling.</p>
-          </div>
-
-          <div class="row">
-            <div class="row-left">
-              <span class="row-title">Research Assistant — Institute of Data Science, Maastricht University</span>
-              <span class="row-meta">Jul 2017 – Feb 2019</span>
-            </div>
-            <p class="row-desc">Deep learning models for biomedical metadata classification; CNN achieved 83% accuracy.</p>
-          </div>
-
+          <p>Vantage federated learning infrastructure; semantic data modeling.</p>
         </div>
-      </section>
 
-      <div class="divider"></div>
-
-      <!-- Toolkit -->
-      <section id="toolkit" class="block">
-        <h2 class="block-title">Engineering Toolkit</h2>
-        <div class="toolkit-groups">
-          <div class="toolkit-row">
-            <span class="toolkit-label">ML / AI</span>
-            <span class="toolkit-items">Python · PyTorch · Transformers · LangChain · RAG pipelines · MLFlow</span>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">Research Assistant &mdash; Institute of Data Science, Maastricht University</span>
+            <span class="job-meta">Jul 2017 – Feb 2019</span>
           </div>
-          <div class="toolkit-row">
-            <span class="toolkit-label">Data</span>
-            <span class="toolkit-items">Kafka · SQL · Pandas · FastAPI · Data pipelines</span>
-          </div>
-          <div class="toolkit-row">
-            <span class="toolkit-label">Cloud</span>
-            <span class="toolkit-items">AWS · GCP · Gradio</span>
-          </div>
+          <p>Deep learning models for biomedical metadata; CNN achieved 83% accuracy.</p>
         </div>
-      </section>
 
-      <div class="divider"></div>
+      </div>
+    </section>
 
-      <!-- Education -->
-      <section id="education" class="block">
-        <h2 class="block-title">Education</h2>
-        <div class="timeline">
-          <div class="row">
-            <div class="row-left">
-              <span class="row-title">M.Sc. Data Science in Decision Making</span>
-              <span class="row-meta">Maastricht University, Netherlands</span>
-            </div>
-          </div>
-          <div class="row">
-            <div class="row-left">
-              <span class="row-title">B.Tech. Information and Communication Technology</span>
-              <span class="row-meta">DA-IICT, India</span>
-            </div>
-          </div>
+    <div class="divider"></div>
+
+    <!-- Toolkit -->
+    <section id="toolkit">
+      <h2>Toolkit</h2>
+      <dl class="toolkit">
+        <div class="toolkit-row">
+          <dt>ML / AI</dt>
+          <dd>Python · PyTorch · Transformers · LangChain · RAG · MLFlow · Scikit-learn</dd>
         </div>
-      </section>
+        <div class="toolkit-row">
+          <dt>Data</dt>
+          <dd>Kafka · SQL · Pandas · FastAPI · Gradio</dd>
+        </div>
+        <div class="toolkit-row">
+          <dt>Cloud</dt>
+          <dd>AWS · GCP</dd>
+        </div>
+      </dl>
+    </section>
 
-      <div class="divider"></div>
+    <div class="divider"></div>
 
-      <!-- Hobbies -->
-      <section id="hobbies" class="block">
-        <h2 class="block-title">Hobbies</h2>
-        <div class="hobbies">
-          <div class="hobby-item">
-            <p class="hobby-title">Anime Fan</p>
-            <p class="hobby-desc">Always on the lookout for the next great series.</p>
-          </div>
-          <div class="hobby-item">
-            <p class="hobby-title">Fitness Enthusiast</p>
-            <p class="hobby-desc">Staying active and pushing limits.</p>
-          </div>
-          <div class="hobby-item">
-            <p class="hobby-title">Coffee Geek</p>
-            <p class="hobby-desc">Passionate about good brews and the ritual behind them.</p>
-          </div>
-          <div class="hobby-item">
-            <p class="hobby-title">Horror Movie Lover</p>
-            <p class="hobby-desc">The scarier, the better.</p>
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="timeline">
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">M.Sc. Data Science in Decision Making</span>
+            <span class="job-meta">Maastricht University, Netherlands</span>
           </div>
         </div>
-      </section>
-
-      <div class="divider"></div>
-
-      <!-- Contact -->
-      <section id="contact" class="block">
-        <h2 class="block-title">Contact</h2>
-        <div class="contact-links">
-          <a href="mailto:stuti257@gmail.com">Say Hello</a>
-          <a href="https://www.linkedin.com/in/stuti-nayak/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/stutinayak" target="_blank" rel="noopener">GitHub</a>
-          <a href="StutiNayakResume.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
+        <div class="job">
+          <div class="job-header">
+            <span class="job-title">B.Tech. Information and Communication Technology</span>
+            <span class="job-meta">DA-IICT, India</span>
+          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-    </main>
-  </div>
+    <div class="divider"></div>
+
+    <!-- Hobbies -->
+    <section id="hobbies">
+      <h2>Outside Work</h2>
+      <ul class="hobbies" aria-label="Hobbies and interests">
+        <li><strong>Anime fan</strong> &mdash; always on the lookout for the next great series</li>
+        <li><strong>Fitness enthusiast</strong> &mdash; staying active and pushing limits</li>
+        <li><strong>Coffee geek</strong> &mdash; passionate about good brews and the ritual behind them</li>
+        <li><strong>Horror movie lover</strong> &mdash; the scarier, the better</li>
+      </ul>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- Contact -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p class="contact-text">
+        I'd love to chat. The best way to reach me is over
+        <a href="mailto:stuti257@gmail.com">email</a> &mdash;
+        whether it's about a role, a project, or just a shared interest in ML or horror films.
+        You can also find me on <a href="https://www.linkedin.com/in/stuti-nayak/" target="_blank" rel="noopener">LinkedIn</a>.
+      </p>
+    </section>
+
+  </main>
 
   <footer>
-    <p>&copy; 2026 Stuti Nayak</p>
+    <p>&copy; <span id="year"></span> Stuti Nayak</p>
   </footer>
 
   <script>
+    // Dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Dark mode
     const toggle = document.getElementById('themeToggle');
-    const label = toggle.querySelector('.theme-toggle-label');
-    const icon = toggle.querySelector('.theme-toggle-icon');
+    const icon = document.getElementById('themeIcon');
 
     function applyTheme(dark) {
       document.documentElement.classList.toggle('dark', dark);
-      label.textContent = dark ? 'Light mode' : 'Dark mode';
       icon.textContent = dark ? '☀' : '☾';
+      toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
     }
 
     const saved = localStorage.getItem('theme');
@@ -298,6 +283,31 @@
       localStorage.setItem('theme', isDark ? 'light' : 'dark');
       applyTheme(!isDark);
     });
+
+    // Skill filter
+    const filterBtns = document.querySelectorAll('.skill-tag');
+    const projects = document.querySelectorAll('.project');
+    const hint = document.getElementById('filterHint');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const skill = btn.dataset.skill;
+        let visible = 0;
+
+        projects.forEach(p => {
+          const skills = p.dataset.skills.split(',');
+          const show = skill === 'all' || skills.includes(skill);
+          p.style.display = show ? '' : 'none';
+          if (show) visible++;
+        });
+
+        hint.textContent = skill === 'all' ? '' : `Showing ${visible} project${visible !== 1 ? 's' : ''} using ${skill}`;
+      });
+    });
   </script>
+
 </body>
 </html>
