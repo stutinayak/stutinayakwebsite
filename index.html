@@ -4,259 +4,287 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hi, I'm Stuti!</title>
+  <meta name="description" content="Stuti Nayak, ML Engineer and Data Engineer in The Hague, Netherlands." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>" />
+  <script>
+    // Apply theme before first paint to avoid a flash
+    (function () {
+      var saved = null;
+      try { saved = localStorage.getItem('theme'); } catch (e) {}
+      var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (dark) document.documentElement.classList.add('dark');
+    })();
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- Top bar -->
   <header class="topbar">
-    <span class="topbar-name">Stuti Nayak</span>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-      <span class="theme-icon" id="themeIcon">☾</span>
-    </button>
+    <div class="topbar-inner">
+      <a class="topbar-name" href="#top">Stuti Nayak<span class="mark-dot" aria-hidden="true">.</span></a>
+      <nav class="topnav" aria-label="Sections">
+        <a href="#systems">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+        <span class="theme-icon" id="themeIcon" aria-hidden="true">☾</span>
+      </button>
+    </div>
   </header>
 
-  <main class="container">
+  <main class="container" id="main">
 
     <!-- Hero -->
-    <section class="hero">
-      <img src="30b5c10c-f6f8-4bda-8ba1-92d645031209.png" alt="Stuti Nayak" class="avatar" />
-      <div class="hero-text">
-        <h1>Stuti Nayak</h1>
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="hero-head">
         <p class="role">ML Engineer · Data Engineer</p>
-        <p class="location">The Hague, Netherlands &middot; <span class="open-badge">Open to roles NL / EU</span></p>
-        <p class="bio">Building production ML systems, NLP pipelines, and LLM-powered applications integrated with real-world data pipelines and cloud infrastructure.</p>
+        <h1 id="hero-name">Stuti Nayak</h1>
+      </div>
+      <div class="hero-aside">
+        <img src="30b5c10c-f6f8-4bda-8ba1-92d645031209.png" alt="Portrait of Stuti Nayak" class="avatar" width="160" height="200" />
+      </div>
+      <div class="hero-text">
+        <p class="bio">Building production ML systems, NLP pipelines, and <span class="nowrap">LLM-powered</span> applications integrated with real-world data pipelines and cloud infrastructure.</p>
+        <p class="location">
+          <span>The Hague, Netherlands</span>
+          <span class="open-badge"><span class="dot" aria-hidden="true"></span>Open to roles NL / EU</span>
+        </p>
         <nav class="hero-links" aria-label="Contact links">
-          <a href="https://www.linkedin.com/in/stuti-nayak/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://github.com/stutinayak" target="_blank" rel="noopener">GitHub</a>
-          <a href="StutiNayakResume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a href="https://www.linkedin.com/in/stuti-nayak/" target="_blank" rel="noopener" class="ext">LinkedIn</a>
+          <a href="https://github.com/stutinayak" target="_blank" rel="noopener" class="ext">GitHub</a>
+          <a href="StutiNayakResume.pdf" target="_blank" rel="noopener" class="ext">Resume</a>
           <a href="mailto:stuti257@gmail.com">Email</a>
         </nav>
       </div>
     </section>
 
-    <div class="divider"></div>
-
     <!-- What I Build -->
-    <section id="build">
-      <h2>What I Build</h2>
-      <ul class="build-list">
-        <li>
-          <span class="build-label">Machine Learning Systems</span>
-          <span class="build-detail">NLP classification pipelines (BERT / RoBERTa)</span>
-        </li>
-        <li>
-          <span class="build-label">LLM Applications</span>
-          <span class="build-detail">Retrieval-Augmented Generation systems</span>
-        </li>
-        <li>
-          <span class="build-label">Data Infrastructure</span>
-          <span class="build-detail">Streaming pipelines and ML deployment systems</span>
-        </li>
-      </ul>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skill-filters" id="skillFilters" role="group" aria-label="Filter projects by skill">
-        <button class="skill-tag active" data-skill="all">All</button>
-        <button class="skill-tag" data-skill="Python">Python</button>
-        <button class="skill-tag" data-skill="PyTorch">PyTorch</button>
-        <button class="skill-tag" data-skill="Transformers">Transformers</button>
-        <button class="skill-tag" data-skill="LangChain">LangChain</button>
-        <button class="skill-tag" data-skill="RAG">RAG</button>
-        <button class="skill-tag" data-skill="FastAPI">FastAPI</button>
-        <button class="skill-tag" data-skill="Kafka">Kafka</button>
-        <button class="skill-tag" data-skill="AWS">AWS</button>
-        <button class="skill-tag" data-skill="GCP">GCP</button>
-        <button class="skill-tag" data-skill="MLFlow">MLFlow</button>
-        <button class="skill-tag" data-skill="SQL">SQL</button>
-        <button class="skill-tag" data-skill="Pandas">Pandas</button>
-      </div>
-      <p class="filter-hint" id="filterHint" aria-live="polite"></p>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Selected Systems -->
-    <section id="systems">
-      <h2>Selected Systems</h2>
-      <div class="projects" id="projectList">
-
-        <article class="project" data-skills="Python,FastAPI,LangChain,RAG,Transformers">
-          <div class="project-header">
-            <h3>Food QA Retrieval System</h3>
-            <a href="https://www.datascienceportfol.io/stuti257/projects/1" target="_blank" rel="noopener">View &rarr;</a>
-          </div>
-          <p>Production-style Q&amp;A API using Retrieval-Augmented Generation with document chunking and vector indexing.</p>
-          <div class="tag-list" aria-label="Technologies used">
-            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">Transformers</span>
-          </div>
-        </article>
-
-        <article class="project" data-skills="Python,PyTorch,Transformers,AWS">
-          <div class="project-header">
-            <h3>NLP Classification Pipeline</h3>
-            <a href="https://www.datascienceportfol.io/stuti257/projects/2" target="_blank" rel="noopener">View &rarr;</a>
-          </div>
-          <p>BERT/BERTopic multi-label classification; RoBERTa sentiment analysis pipeline deployed on AWS.</p>
-          <div class="tag-list" aria-label="Technologies used">
-            <span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">AWS</span>
-          </div>
-        </article>
-
-        <article class="project" data-skills="Python,Kafka,MLFlow,GCP">
-          <div class="project-header">
-            <h3>Streaming Data Pipeline</h3>
-          </div>
-          <p>IoT simulation pipeline using Kafka ingestion, processing layer, and ML analytics on Google Cloud.</p>
-          <div class="tag-list" aria-label="Technologies used">
-            <span class="tag">Python</span><span class="tag">Kafka</span><span class="tag">MLFlow</span><span class="tag">GCP</span>
-          </div>
-        </article>
-
-        <article class="project" data-skills="Python,Scikit-learn,Pandas,SQL">
-          <div class="project-header">
-            <h3>Churn Prediction</h3>
-            <a href="https://www.datascienceportfol.io/stuti257/projects/0" target="_blank" rel="noopener">View &rarr;</a>
-          </div>
-          <p>End-to-end ML project predicting customer churn for a telecom company with EDA and model deployment.</p>
-          <div class="tag-list" aria-label="Technologies used">
-            <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Pandas</span><span class="tag">SQL</span>
-          </div>
-        </article>
-
+    <section class="block" id="build" aria-labelledby="h-build">
+      <h2 id="h-build">What I Build</h2>
+      <div class="block-body">
+        <ul class="build-list">
+          <li>
+            <span class="build-label">Machine Learning Systems</span>
+            <span class="build-detail">NLP classification pipelines (BERT / RoBERTa)</span>
+          </li>
+          <li>
+            <span class="build-label">LLM Applications</span>
+            <span class="build-detail">Retrieval-Augmented Generation systems</span>
+          </li>
+          <li>
+            <span class="build-label">Data Infrastructure</span>
+            <span class="build-detail">Streaming pipelines and ML deployment systems</span>
+          </li>
+        </ul>
       </div>
     </section>
 
-    <div class="divider"></div>
+    <!-- Selected Systems (with skill filter) -->
+    <section class="block" id="systems" aria-labelledby="h-systems">
+      <div class="block-aside">
+        <h2 id="h-systems">Selected Systems</h2>
+        <div class="filter" id="skills">
+          <p class="filter-label" id="filterLabel">Filter by skill</p>
+          <div class="skill-filters" id="skillFilters" role="group" aria-labelledby="filterLabel">
+            <button type="button" class="skill-tag active" aria-pressed="true" data-skill="all">All</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="Python">Python</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="PyTorch">PyTorch</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="Transformers">Transformers</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="LangChain">LangChain</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="RAG">RAG</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="FastAPI">FastAPI</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="Kafka">Kafka</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="AWS">AWS</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="GCP">GCP</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="MLFlow">MLFlow</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="SQL">SQL</button>
+            <button type="button" class="skill-tag" aria-pressed="false" data-skill="Pandas">Pandas</button>
+          </div>
+          <p class="filter-hint" id="filterHint" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="block-body">
+        <div class="projects" id="projectList">
+
+          <article class="project" data-skills="Python,FastAPI,LangChain,RAG,Transformers">
+            <div class="project-header">
+              <h3>Food QA Retrieval System</h3>
+              <a href="https://www.datascienceportfol.io/stuti257/projects/1" target="_blank" rel="noopener" aria-label="View Food QA Retrieval System">View &rarr;</a>
+            </div>
+            <p>Production-style Q&amp;A API using Retrieval-Augmented Generation with document chunking and vector indexing.</p>
+            <div class="tag-list" aria-label="Technologies used">
+              <span class="tag">Python</span> <span class="tag">FastAPI</span> <span class="tag">LangChain</span> <span class="tag">RAG</span> <span class="tag">Transformers</span>
+            </div>
+          </article>
+
+          <article class="project" data-skills="Python,PyTorch,Transformers,AWS">
+            <div class="project-header">
+              <h3>NLP Classification Pipeline</h3>
+              <a href="https://www.datascienceportfol.io/stuti257/projects/2" target="_blank" rel="noopener" aria-label="View NLP Classification Pipeline">View &rarr;</a>
+            </div>
+            <p>BERT/BERTopic multi-label classification; RoBERTa sentiment analysis pipeline deployed on AWS.</p>
+            <div class="tag-list" aria-label="Technologies used">
+              <span class="tag">Python</span> <span class="tag">PyTorch</span> <span class="tag">Transformers</span> <span class="tag">AWS</span>
+            </div>
+          </article>
+
+          <article class="project" data-skills="Python,Kafka,MLFlow,GCP">
+            <div class="project-header">
+              <h3>Streaming Data Pipeline</h3>
+            </div>
+            <p>IoT simulation pipeline using Kafka ingestion, processing layer, and ML analytics on Google Cloud.</p>
+            <div class="tag-list" aria-label="Technologies used">
+              <span class="tag">Python</span> <span class="tag">Kafka</span> <span class="tag">MLFlow</span> <span class="tag">GCP</span>
+            </div>
+          </article>
+
+          <article class="project" data-skills="Python,Scikit-learn,Pandas,SQL">
+            <div class="project-header">
+              <h3>Churn Prediction</h3>
+              <a href="https://www.datascienceportfol.io/stuti257/projects/0" target="_blank" rel="noopener" aria-label="View Churn Prediction">View &rarr;</a>
+            </div>
+            <p>End-to-end ML project predicting customer churn for a telecom company with EDA and model deployment.</p>
+            <div class="tag-list" aria-label="Technologies used">
+              <span class="tag">Python</span> <span class="tag">Scikit-learn</span> <span class="tag">Pandas</span> <span class="tag">SQL</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
 
     <!-- Experience -->
-    <section id="experience">
-      <h2>Experience</h2>
-      <div class="timeline">
+    <section class="block" id="experience" aria-labelledby="h-experience">
+      <h2 id="h-experience">Experience</h2>
+      <div class="block-body">
+        <ol class="timeline">
 
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Data Engineer</span>
-            <span class="job-meta">The Hague &middot; Current</span>
-          </div>
-          <p>Built Kafka-based IoT simulation pipeline and secure streaming architecture with data governance.</p>
-        </div>
+          <li class="job">
+            <div class="job-header">
+              <h3 class="job-title">Data Engineer</h3>
+              <span class="job-meta">The Hague &middot; Current</span>
+            </div>
+            <p>Built Kafka-based IoT simulation pipeline and secure streaming architecture with data governance.</p>
+          </li>
 
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Data Scientist, Knownwell</span>
-            <span class="job-meta">The Hague &middot; Feb 2024 – Jul 2024</span>
-          </div>
-          <p>NLP classification using BERT / BERTopic; RoBERTa sentiment analysis; deployed on AWS and GCP.</p>
-        </div>
+          <li class="job">
+            <div class="job-header">
+              <h3 class="job-title">Data Scientist, Knownwell</h3>
+              <span class="job-meta">The Hague &middot; Feb 2024 – Jul 2024</span>
+            </div>
+            <p>NLP classification using BERT / BERTopic; RoBERTa sentiment analysis; deployed on AWS and GCP.</p>
+          </li>
 
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Data Scientist, Rate.nl</span>
-            <span class="job-meta">Rotterdam &middot; Aug 2021 – Sept 2023</span>
-          </div>
-          <p>wav2vec 2.0 audio analysis; MLFlow MLOps pipeline; Google Cloud deployment.</p>
-        </div>
+          <li class="job">
+            <div class="job-header">
+              <h3 class="job-title">Data Scientist, Rate.nl</h3>
+              <span class="job-meta">Rotterdam &middot; Aug 2021 – Sep 2023</span>
+            </div>
+            <p>wav2vec 2.0 audio analysis; MLFlow MLOps pipeline; Google Cloud deployment.</p>
+          </li>
 
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Researcher, Clinical Data Science, Maastricht University</span>
-            <span class="job-meta">Sept 2019 – Aug 2020</span>
-          </div>
-          <p>Vantage federated learning infrastructure; semantic data modeling.</p>
-        </div>
+          <li class="job">
+            <div class="job-header">
+              <h3 class="job-title">Researcher, Clinical Data Science, Maastricht University</h3>
+              <span class="job-meta">Sep 2019 – Aug 2020</span>
+            </div>
+            <p>Vantage federated learning infrastructure; semantic data modeling.</p>
+          </li>
 
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">Research Assistant, Institute of Data Science, Maastricht University</span>
-            <span class="job-meta">Jul 2017 – Feb 2019</span>
-          </div>
-          <p>Deep learning models for biomedical metadata; CNN achieved 83% accuracy.</p>
-        </div>
+          <li class="job">
+            <div class="job-header">
+              <h3 class="job-title">Research Assistant, Institute of Data Science, Maastricht University</h3>
+              <span class="job-meta">Jul 2017 – Feb 2019</span>
+            </div>
+            <p>Deep learning models for biomedical metadata; CNN achieved 83% accuracy.</p>
+          </li>
 
+        </ol>
       </div>
     </section>
-
-    <div class="divider"></div>
 
     <!-- Toolkit -->
-    <section id="toolkit">
-      <h2>Toolkit</h2>
-      <dl class="toolkit">
-        <div class="toolkit-row">
-          <dt>ML / AI</dt>
-          <dd>Python · PyTorch · Transformers · LangChain · RAG · MLFlow · Scikit-learn</dd>
-        </div>
-        <div class="toolkit-row">
-          <dt>Data</dt>
-          <dd>Kafka · SQL · Pandas · FastAPI · Gradio</dd>
-        </div>
-        <div class="toolkit-row">
-          <dt>Cloud</dt>
-          <dd>AWS · GCP</dd>
-        </div>
-      </dl>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Education -->
-    <section id="education">
-      <h2>Education</h2>
-      <div class="timeline">
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">M.Sc. Data Science in Decision Making</span>
-            <span class="job-meta">Maastricht University, Netherlands</span>
+    <section class="block" id="toolkit" aria-labelledby="h-toolkit">
+      <h2 id="h-toolkit">Toolkit</h2>
+      <div class="block-body">
+        <dl class="toolkit">
+          <div class="toolkit-row">
+            <dt>ML / AI</dt>
+            <dd class="dotlist"><span class="tag">Python</span><span class="tag">PyTorch</span><span class="tag">Transformers</span><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">MLFlow</span><span class="tag">Scikit-learn</span></dd>
           </div>
-        </div>
-        <div class="job">
-          <div class="job-header">
-            <span class="job-title">B.Tech. Information and Communication Technology</span>
-            <span class="job-meta">DA-IICT, India</span>
+          <div class="toolkit-row">
+            <dt>Data</dt>
+            <dd class="dotlist"><span class="tag">Kafka</span><span class="tag">SQL</span><span class="tag">Pandas</span><span class="tag">FastAPI</span><span class="tag">Gradio</span></dd>
           </div>
-        </div>
+          <div class="toolkit-row">
+            <dt>Cloud</dt>
+            <dd class="dotlist"><span class="tag">AWS</span><span class="tag">GCP</span></dd>
+          </div>
+        </dl>
       </div>
     </section>
 
-    <div class="divider"></div>
-
-    <!-- Hobbies -->
-    <section id="hobbies">
-      <h2>Outside Work</h2>
-      <ul class="hobbies" aria-label="Hobbies and interests">
-        <li><strong>Anime fan:</strong> always on the lookout for the next great series</li>
-        <li><strong>Fitness enthusiast:</strong> staying active and pushing limits</li>
-        <li><strong>Coffee geek:</strong> passionate about good brews and the ritual behind them</li>
-        <li><strong>Horror movie lover:</strong> the scarier, the better</li>
-      </ul>
+    <!-- Education -->
+    <section class="block" id="education" aria-labelledby="h-education">
+      <h2 id="h-education">Education</h2>
+      <div class="block-body">
+        <ul class="timeline">
+          <li class="job">
+            <div class="job-header">
+              <h3 class="job-title">M.Sc. Data Science in Decision Making</h3>
+              <span class="job-meta">Maastricht University, Netherlands</span>
+            </div>
+          </li>
+          <li class="job">
+            <div class="job-header">
+              <h3 class="job-title">B.Tech. Information and Communication Technology</h3>
+              <span class="job-meta">DA-IICT, India</span>
+            </div>
+          </li>
+        </ul>
+      </div>
     </section>
 
-    <div class="divider"></div>
+    <!-- Hobbies -->
+    <section class="block" id="hobbies" aria-labelledby="h-hobbies">
+      <h2 id="h-hobbies">Outside Work</h2>
+      <div class="block-body">
+        <ul class="hobbies" aria-label="Hobbies and interests">
+          <li><strong>Anime fan<span class="colon">:</span></strong> <span class="hobby-detail">always on the lookout for the next great series</span></li>
+          <li><strong>Fitness enthusiast<span class="colon">:</span></strong> <span class="hobby-detail">staying active and pushing limits</span></li>
+          <li><strong>Coffee geek<span class="colon">:</span></strong> <span class="hobby-detail">passionate about good brews and the ritual behind them</span></li>
+          <li><strong>Horror movie lover<span class="colon">:</span></strong> <span class="hobby-detail">the scarier, the better</span></li>
+        </ul>
+      </div>
+    </section>
 
     <!-- Contact -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p class="contact-text">
-        I'd love to chat. Reach me over <a href="mailto:stuti257@gmail.com">email</a> or
-        <a href="https://www.linkedin.com/in/stuti-nayak/" target="_blank" rel="noopener">LinkedIn</a>
-        about a role, a project, or just ML.
-      </p>
+    <section class="block block-contact" id="contact" aria-labelledby="h-contact">
+      <h2 id="h-contact">Contact</h2>
+      <div class="block-body">
+        <p class="contact-text">
+          <span class="contact-lead">I'd love to chat.</span>
+          Reach me over <a href="mailto:stuti257@gmail.com">email</a> or
+          <a href="https://www.linkedin.com/in/stuti-nayak/" target="_blank" rel="noopener">LinkedIn</a>
+          about a role, a project, or just ML.
+        </p>
+      </div>
     </section>
 
   </main>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Stuti Nayak</p>
+  <footer class="footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Stuti Nayak</p>
+      <a class="footer-top" href="#top">Back to top &uarr;</a>
+    </div>
   </footer>
 
   <script>
@@ -273,13 +301,14 @@
       toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
     }
 
-    const saved = localStorage.getItem('theme');
+    let saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (e) {}
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
     applyTheme(saved ? saved === 'dark' : prefersDark);
 
     toggle.addEventListener('click', () => {
       const isDark = document.documentElement.classList.contains('dark');
-      localStorage.setItem('theme', isDark ? 'light' : 'dark');
+      try { localStorage.setItem('theme', isDark ? 'light' : 'dark'); } catch (e) {}
       applyTheme(!isDark);
     });
 
@@ -290,8 +319,12 @@
 
     filterBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
+        filterBtns.forEach(b => {
+          b.classList.remove('active');
+          b.setAttribute('aria-pressed', 'false');
+        });
         btn.classList.add('active');
+        btn.setAttribute('aria-pressed', 'true');
 
         const skill = btn.dataset.skill;
         let visible = 0;
