@@ -1,0 +1,5 @@
+# Search engines, recruiter tools and AI agents are welcome to read this site.
+User-agent: *
+Allow: /
+
+Sitemap: https://stutinayak.com/sitemap.xml

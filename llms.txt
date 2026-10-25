@@ -1,0 +1,67 @@
+# Stuti Nayak
+
+> ML Engineer and Data Engineer based in The Hague, Netherlands. Applied ML professional with 4+ years of industry experience plus academic research in machine learning, data pipelines and model evaluation. Builds transformer-based NLP and speech classifiers for noisy real-world data, LLM/RAG applications, and production data pipelines. Open to ML Engineer and Data Engineer roles in the Netherlands and EU.
+
+- Website: https://stutinayak.com/
+- Resume (PDF): https://stutinayak.com/StutiNayakResume.pdf
+- Email: stuti257@gmail.com
+- LinkedIn: https://www.linkedin.com/in/stuti-nayak/
+- GitHub: https://github.com/stutinayak
+- Location: The Hague, Netherlands
+- Availability: open to roles in the Netherlands and EU
+
+## Experience
+
+### Data Engineer, Aurelius Enterprise (Amsterdam, Netherlands), Apr 2025 to present
+- Supports a confidential client-facing AI automation initiative: examining source structures, preparing data and recreating operational KPIs to test technical feasibility.
+- Designs evaluation criteria for AI outputs, defining success measures, data gaps, failure modes and stakeholder usability before model development.
+- Designed and built production event and telemetry ingestion pipelines, transforming noisy upstream data into schema-validated datasets for analytics and downstream processing.
+- Works with client and engineering stakeholders on data quality rules, dataset contracts, lineage and governance.
+- Contributed feature development and bug fixes to an open-source metadata platform; documented integration decisions and technical handovers.
+
+### Data Scientist, Knownwell (The Hague, Netherlands), Feb 2024 to Jul 2024
+- Developed a BERT/BERTopic-based classification and topic-routing model, improving match accuracy from 20% to 30% on real-world text data.
+- Built and validated a separate RoBERTa sentiment classifier using held-out evaluation and error analysis.
+- Translated an ambiguous stakeholder question into a measurable ML problem with defined metrics and repeatable comparisons.
+- Iterated on NLP preprocessing, inference prototypes and evaluation workflows; communicated trade-offs to non-technical stakeholders.
+
+### Data Scientist, Rate.nl (Rotterdam, Netherlands), Aug 2021 to Sep 2023
+- Built an audio classification pipeline using wav2vec 2.0 on noisy real-world call recordings, improving accuracy from 27% to 55% through preprocessing and experimentation.
+- Designed and ran model experiments, tracked metrics with MLflow and analysed failure cases to choose a reliable production candidate.
+- Packaged and deployed containerised model inference with Docker on Google Cloud Run.
+- Built a Gradio application with model-output visualisations so stakeholders could inspect predictions and give feedback during rollout.
+
+### Researcher, Clinical Data Science, Maastricht University (Netherlands), Sep 2019 to Aug 2020
+- Configured federated learning infrastructure (Vantage) for privacy-preserving cross-hospital analytics.
+- Designed a semantic model to standardise data across hospitals and reduce preprocessing overhead.
+
+### Research Assistant, Institute of Data Science, Maastricht University (Netherlands), Jul 2017 to Feb 2019
+- Built a deep learning NLP pipeline over scientific abstracts for biomedical metadata quality assessment.
+- Developed CNN and BiLSTM multi-label classifiers; the CNN reached 83% accuracy on held-out evaluation.
+
+## Skills
+
+- Deep learning: Python, PyTorch, TensorFlow, Hugging Face Transformers, BERT, RoBERTa, wav2vec 2.0, CNN, BiLSTM
+- ML evaluation: held-out validation, cross-validation, precision/recall, imbalanced learning, error analysis, statistical comparison, model selection, MLflow
+- Production ML and software: scikit-learn, Docker, Google Cloud Run, Git, GitHub Actions, CI/CD, reproducible experiments, cloud inference, Gradio, FastAPI
+- Data processing and pipelines: pandas, NumPy, SciPy, SQL, PySpark, Kafka, event and telemetry data, ETL/ELT, feature engineering, schema validation, data quality, BigQuery, PostgreSQL
+- Cloud and applied AI: Google Cloud Platform, Azure, AWS, RAG, LangChain, FAISS, semantic search, confidence-based routing
+
+## Selected projects
+
+- Food QA Retrieval System: production-style Q&A API using Retrieval-Augmented Generation with document chunking and vector indexing (Python, FastAPI, LangChain, Transformers). https://www.datascienceportfol.io/stuti257/projects/1
+- Credit Card Fraud Detection: LightGBM classifier on 284,807 highly imbalanced transactions; temporal splitting, threshold optimisation, ROC-AUC around 0.98, SHAP analysis.
+- NLP Classification Pipeline: BERT/BERTopic multi-label classification and RoBERTa sentiment analysis pipeline (Python, PyTorch, Transformers, AWS). https://www.datascienceportfol.io/stuti257/projects/2
+- Streaming Data Pipeline: IoT simulation pipeline with Kafka ingestion, a processing layer and ML analytics on Google Cloud (Python, Kafka, MLflow, GCP).
+- Churn Prediction: end-to-end ML project predicting telecom customer churn, with SQL and behavioural feature engineering (Python, scikit-learn, pandas, SQL). https://www.datascienceportfol.io/stuti257/projects/0
+
+## Education
+
+- M.Sc. Data Science in Decision Making, Maastricht University, Netherlands
+- B.Tech. Information and Communication Technology, Dhirubhai Ambani University (formerly DA-IICT), Gandhinagar, India
+
+## Certifications
+
+- Confluent Certified Developer for Apache Kafka
+- Certified Data Management Professional (CDMP), Associate (DAMA International)
+- Databricks Certified Data Engineer Associate (in progress)
